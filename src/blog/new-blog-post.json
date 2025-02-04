@@ -1,0 +1,11 @@
+{
+  "options": {
+    "featured": false,
+    "date": "{{now}}",
+    "order": 1
+  },
+  "title": "new blog post",
+  "description": "test",
+  "tags": [],
+  "body": "t﻿esting"
+}
