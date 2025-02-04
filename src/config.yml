@@ -10,21 +10,48 @@ collections:
       preview: false
     folder: src/blog/entries
     create: true
-    slug: '{{slug}}'
+    slug: '{{name}}'
     format: json
     fields:
-      - name: content
+      '0':
+        name: content
         label: Content
         widget: markdown
+      name: title
+      label: Title
+      widget: string
+      required: true
   - name: events
     label: Events
     editor:
       preview: false
     folder: src/events/entries
     create: true
-    slug: '{{slug}}'
+    slug: '{{name}}'
     format: json
     fields:
-      - name: date
+      '0':
+        name: date
         label: Date
         widget: dateTime
+      name: title
+      label: Title
+      widget: string
+      required: true
+  - name: testimonial
+    label: Testimonial
+    editor:
+      preview: false
+    folder: src/testimonial/entries
+    create: true
+    slug: '{{name}}'
+    format: json
+    fields:
+      '0':
+        name: name
+        label: Name
+        widget: string
+      name: title
+      label: Title
+      widget: string
+      required: true

@@ -34,7 +34,7 @@ const collections = fs.readdirSync('./app/collections').map(file => {
     },
     folder: 'src/' + content.name.toLowerCase() + '/entries',
     create: true,
-    slug: "{{slug}}",
+    slug: "{{name}}",
     format: "json",
     fields: {...title, ...fields}
   }
