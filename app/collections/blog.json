@@ -9,7 +9,13 @@
   "widgets": [
     {
       "type": "markdown",
-      "name": "Content"
+      "name": "Content",
+      "hint": "C﻿onteudo do blog.",
+      "options": [
+        {
+          "config": "sample: false\ndebug: true"
+        }
+      ]
     }
   ]
 }
