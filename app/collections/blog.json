@@ -5,5 +5,11 @@
       "type": "markdown",
       "name": "Body"
     }
+  ],
+  "widgets": [
+    {
+      "type": "markdown",
+      "name": "Content"
+    }
   ]
 }
