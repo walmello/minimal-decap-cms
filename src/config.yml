@@ -22,4 +22,4 @@ collections:
       - name: "fields"
         label: "Collection Fields"
         widget: code
-        default_language: YAML
+        default_language: yml
