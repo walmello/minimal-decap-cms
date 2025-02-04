@@ -1,0 +1,13 @@
+{
+  "name": "Events",
+  "widgets": [
+    {
+      "type": "dateTime",
+      "name": "Date"
+    },
+    {
+      "type": "boolean",
+      "name": "Featured"
+    }
+  ]
+}
