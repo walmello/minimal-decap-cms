@@ -16,9 +16,10 @@ collections:
     format: json
     fields:
       - name: "name"
-        label: "Collection Name"
+        label: "Collection Title"
         widget: string
 
       - name: "fields"
         label: "Collection Fields"
         widget: code
+        default_language: YAML
