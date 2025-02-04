@@ -9,5 +9,12 @@
       "type": "boolean",
       "name": "Featured"
     }
+  ],
+  "fields": [
+    {
+      "type": "dateTime",
+      "name": "Date",
+      "required": true
+    }
   ]
 }
