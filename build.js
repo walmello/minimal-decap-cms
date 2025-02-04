@@ -13,7 +13,7 @@ config.collections.forEach(collection => {
     const files = fs.readdirSync(path)
     const json = files.map(filename => {
       const file = fs.readFileSync(path + '/' + filename, 'utf-8')
-      return {entries: JSON.parse(file)}
+      return JSON.parse(file)
     })
     fs.writeFileSync(`./src/${name}/index.json`, JSON.stringify(json, null, 2))
   }
