@@ -1,0 +1,9 @@
+{
+  "name": "Other again",
+  "widget": [
+    {
+      "type": "dateTime",
+      "name": "testes"
+    }
+  ]
+}
