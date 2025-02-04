@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "options": {
+        "lang": "yaml"
+      },
+      "name": "Description",
+      "widget": "Text"
+    }
+  ],
+  "name": "Blog"
+}
