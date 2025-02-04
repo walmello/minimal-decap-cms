@@ -7,7 +7,7 @@ public_folder: "src/uploads"
 
 collections:
   - name: "collection"
-    label: "Collections"
+    label: "Collection"
     editor:
       preview: false
     folder: "src/collections"
@@ -58,34 +58,6 @@ collections:
               - name: default
                 label: Default
                 widget: boolean
-          
-        fields:
-          - name: name
-            label: Field Name
-            widget: string
-            required: true
-          
-          - name: label
-            label: Field Label
-            widget: string
-            required: true
-
-          - name: widget
-            label: Field Widget
-            widget: list
-            types:
-              - name: string
-                label: String
-                widget: object
-                fields:
-                  - name: name
-                    label: "Name"
-                    widget: string
-                    required: true
-                  - name: label
-                    label: "Name"
-                    widget: string
-                    required: true
 
 
   - name: "events"
