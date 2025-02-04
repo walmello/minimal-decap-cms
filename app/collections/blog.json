@@ -10,12 +10,9 @@
     {
       "type": "markdown",
       "name": "Content",
-      "hint": "C﻿onteudo do blog.",
-      "options": [
-        {
-          "config": "sample: false\ndebug: true"
-        }
-      ]
+      "hint": "",
+      "options": [],
+      "required": true
     }
   ]
 }
