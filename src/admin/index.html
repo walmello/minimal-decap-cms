@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Content Manager</title>
     <link href="./config.yml" type="text/yaml" rel="cms-config-url"> 
+    <style>
+        .dev-mode {
+            background-color: #dd0000;
+            text-align: center;
+            padding: 0.3rem;
+            font-family: sans-serif;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
+    <div class="dev-mode">
+        DEVELOPMENT MODE
+    </div>
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <!-- Netlify Identity Widget -->
