@@ -1,4 +1,19 @@
 import fs from 'fs';
+import yaml from 'js-yaml';
+import config from './decap_config.js';
+
+
+const content = yaml.dump(config())
+console.log(content)
+fs.writeFileSync(`./src/config.yml`,  content)
+
+
+/*
+fs.writeFileSync(`./src/config.yml`, JSON.stringify({
+  
+}, null, 2))
+
+
 //import parser from "./tree-parser/index.js";
 /*
 

@@ -1,0 +1,524 @@
+    backend:
+      name: git-gateway
+      branch: main
+
+    media_folder: "uploads"
+    public_folder: "src/uploads"
+    
+    site_url: https://minimal-decap-cms.netlify.app/
+
+    collections:
+      - name: "collection"
+        label: "Collection"
+        editor:
+          preview: false
+        folder: "app/collections"
+        create: true
+        slug: "{{name}}"
+        format: json
+        fields:
+          - name: "name"
+            label: "Name"
+            widget: string
+            required: true
+
+          - name: fields
+            label: Fields
+            widget: list
+            summary: '{{fields.name}}'
+            types:
+              - name: boolean
+                label: Boolean
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: code
+                label: Code
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: color
+                label: Color
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: dateTime
+                label: DateTime
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: file
+                label: File
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+                        
+              - name: hidden
+                label: Hidden
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: image
+                label: Image
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: list
+                label: List
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: map
+                label: Map
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: markdown
+                label: Markdown
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: number
+                label: Number
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: object
+                label: Object
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: relation
+                label: Relation
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: select
+                label: Select
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: string
+                label: String
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true
+
+              - name: text
+                label: Text
+                widget: object
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  
+                  - name: required
+                    label: Required
+                    widget: boolean
+                    required: false
+
+                  - name: hint
+                    label: Hint
+                    widget: markdown
+                    required: false
+                  
+
+                  - name: options
+                    label: Options
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - name: config
+                        label: Config
+                        widget: code
+                        default_language: "yaml"
+                        allow_language_selection: false
+                        output_code_only: true

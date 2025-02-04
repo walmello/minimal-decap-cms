@@ -1,12 +1,6 @@
 {
   "name": "Blog",
-  "widget": [
-    {
-      "type": "markdown",
-      "name": "Body"
-    }
-  ],
-  "widgets": [
+  "fields": [
     {
       "type": "markdown",
       "name": "Content"
