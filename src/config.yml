@@ -19,10 +19,6 @@ collections:
         label: "Collection Name"
         widget: string
 
-      - name: "label"
-        label: "Collection Label"
-        widget: string
-
       - name: "fields"
         label: "Collection Fields"
         widget: list
@@ -32,11 +28,7 @@ collections:
             widget: object
             fields:
               - name: name
-                label: Field Name
-                widget: text
-                required: true
-              - name: label
-                label: Field Label
+                label: Name
                 widget: text
                 required: true
               - name: default
@@ -48,11 +40,7 @@ collections:
             widget: object
             fields:
               - name: name
-                label: Field Name
-                widget: text
-                required: true
-              - name: label
-                label: Field Label
+                label: Name
                 widget: text
                 required: true
               - name: default
@@ -65,10 +53,6 @@ collections:
             fields:
               - name: name
                 label: Field Name
-                widget: text
-                required: true
-              - name: label
-                label: Field Label
                 widget: text
                 required: true
               - name: default
