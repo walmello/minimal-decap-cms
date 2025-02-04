@@ -11,6 +11,21 @@ function capitalizeWords(str) {
 const collections = fs.readdirSync('./app/collections').map(file => {
   const path = './app/collections/' + file
   const content = JSON.parse(fs.readFileSync(path, 'utf-8'), null, 2)
+  const title = {
+    name: 'title',
+    label: 'Title',
+    widget: 'string',
+    required: true
+  }
+
+  const fields = content.fields.map(field => {
+      return {
+        name: field.name.toLowerCase(),
+        label: capitalizeWords(field.name),
+        widget: field.type
+      }
+    })
+
   return {
     name: content.name.toLowerCase(),
     label: capitalizeWords(content.name),
@@ -21,24 +36,16 @@ const collections = fs.readdirSync('./app/collections').map(file => {
     create: true,
     slug: "{{slug}}",
     format: "json",
-    fields: content.fields.map(field => {
-      return {
-        name: field.name.toLowerCase(),
-        label: capitalizeWords(field.name),
-        widget: field.type
-      }
-    })
+    fields: {...title, ...fields}
   }
 })
 
-export default function (){
-  return {
-    "backend": {
-      "name": "git-gateway",
-      "branch": "main"
-    },
-    "media_folder": "uploads",
-    "public_folder": "build/uploads",
-    collections
-  }
+export default {
+  "backend": {
+    "name": "git-gateway",
+    "branch": "main"
+  },
+  "media_folder": "uploads",
+  "public_folder": "build/uploads",
+  collections
 }

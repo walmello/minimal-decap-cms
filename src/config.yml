@@ -16,3 +16,15 @@ collections:
       - name: content
         label: Content
         widget: markdown
+  - name: events
+    label: Events
+    editor:
+      preview: false
+    folder: src/events/entries
+    create: true
+    slug: '{{slug}}'
+    format: json
+    fields:
+      - name: date
+        label: Date
+        widget: dateTime
