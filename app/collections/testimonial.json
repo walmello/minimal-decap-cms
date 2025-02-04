@@ -1,0 +1,9 @@
+{
+  "name": "Testimonial",
+  "fields": [
+    {
+      "type": "string",
+      "name": "Name"
+    }
+  ]
+}
