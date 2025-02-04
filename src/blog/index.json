@@ -1,5 +1,17 @@
 [
   {
+    "path": "again.json",
+    "slug": "again",
+    "options": {
+      "featured": false,
+      "date": "{{now}}",
+      "order": 234
+    },
+    "title": "again",
+    "description": "asdfasdf",
+    "body": "a﻿sdfasdf"
+  },
+  {
     "path": "new-blog-post.json",
     "slug": "new-blog-post",
     "options": {
@@ -11,5 +23,17 @@
     "description": "test",
     "tags": [],
     "body": "t﻿esting"
+  },
+  {
+    "path": "other-post.json",
+    "slug": "other-post",
+    "options": {
+      "featured": false,
+      "date": "{{now}}",
+      "order": 22
+    },
+    "title": "Other Post",
+    "description": "asdfasdfasdf",
+    "body": "a﻿sdfasdfsd"
   }
 ]

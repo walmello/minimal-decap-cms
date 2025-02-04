@@ -1,5 +1,7 @@
 import fs from 'fs';
 //import parser from "./tree-parser/index.js";
+/*
+
 
 const base = "https://minimal-decap-cms-tests.netlify.app"
 const entries = fs.readdirSync('./src').filter(entry => {
@@ -25,3 +27,5 @@ entries.forEach(entry => {
   })
   fs.writeFileSync(`./src/${entry}/index.json`, JSON.stringify(result, null, 2))
 })
+
+*/
