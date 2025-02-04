@@ -1,0 +1,10 @@
+{
+  "options": {
+    "featured": false,
+    "date": "{{now}}",
+    "order": 22
+  },
+  "title": "Other Post",
+  "description": "asdfasdfasdf",
+  "body": "a﻿sdfasdfsd"
+}
