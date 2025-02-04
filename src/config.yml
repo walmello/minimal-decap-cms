@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: uploads
-public_folder: build/uploads
+media_folder: src/uploads
+public_folder: uploads
 collections:
   - name: blog
     label: Blog
@@ -13,14 +13,13 @@ collections:
     slug: '{{name}}'
     format: json
     fields:
-      '0':
-        name: content
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: content
         label: Content
         widget: markdown
-      name: title
-      label: Title
-      widget: string
-      required: true
   - name: events
     label: Events
     editor:
@@ -30,14 +29,13 @@ collections:
     slug: '{{name}}'
     format: json
     fields:
-      '0':
-        name: date
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: date
         label: Date
         widget: dateTime
-      name: title
-      label: Title
-      widget: string
-      required: true
   - name: testimonial
     label: Testimonial
     editor:
@@ -47,11 +45,10 @@ collections:
     slug: '{{name}}'
     format: json
     fields:
-      '0':
-        name: name
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: name
         label: Name
         widget: string
-      name: title
-      label: Title
-      widget: string
-      required: true
