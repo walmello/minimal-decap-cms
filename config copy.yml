@@ -6,6 +6,71 @@ media_folder: "uploads"
 public_folder: "src/uploads"
 
 collections:
+  - name: "collection"
+    label: "Collection"
+    editor:
+      preview: false
+    folder: "src/collections"
+    create: true
+    slug: "{{slug}}"
+    format: json
+    fields:
+      - name: "name"
+        label: "Collection Name"
+        widget: string
+
+      - name: "fields"
+        label: "Collection Fields"
+        widget: list
+        types:
+          - name: string
+            label: String
+            widget: object
+            fields:
+              - name: name
+                label: Name
+                widget: string
+                required: true
+              - name: default
+                label: Default
+                widget: string
+              - name: required
+                label: Required
+                widget: boolean
+
+          - name: text
+            label: Text
+            widget: object
+            fields:
+              - name: name
+                label: Name
+                widget: string
+                required: true
+              - name: default
+                label: Default
+                widget: string
+              - name: required
+                label: Required
+                widget: boolean
+
+          - name: boolean
+            label: Boolean
+            widget: object
+            fields:
+              - name: name
+                label: Name
+                widget: string
+                required: true
+              - name: default
+                label: Default
+                widget: boolean
+              - name: required
+                label: Required
+                widget: boolean
+
+          - name: 
+
+
   - name: "events"
     label: "Events"
     editor:
