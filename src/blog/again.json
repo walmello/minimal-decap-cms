@@ -1,0 +1,10 @@
+{
+  "options": {
+    "featured": false,
+    "date": "{{now}}",
+    "order": 234
+  },
+  "title": "again",
+  "description": "asdfasdf",
+  "body": "a﻿sdfasdf"
+}
