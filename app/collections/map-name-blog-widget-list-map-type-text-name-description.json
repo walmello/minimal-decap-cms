@@ -1,9 +1,0 @@
-{
-  "name": "Blog",
-  "widget": [
-    {
-      "type": "text",
-      "name": "Description"
-    }
-  ]
-}

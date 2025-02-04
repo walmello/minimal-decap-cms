@@ -1,9 +1,0 @@
-{
-  "name": "Other Blog",
-  "widget": [
-    {
-      "type": "text",
-      "name": "Title"
-    }
-  ]
-}

@@ -5,157 +5,61 @@ backend:
 media_folder: "uploads"
 public_folder: "src/uploads"
 
+publish_mode: editorial_workflow
+
+site_url: https://minimal-decap-cms.netlify.app/
+
 collections:
   - name: "collection"
     label: "Collection"
     editor:
       preview: false
-    folder: "src/collections"
+    folder: "app/collections"
     create: true
     slug: "{{slug}}"
     format: json
     fields:
       - name: "name"
-        label: "Collection Name"
+        label: "Collection Title"
         widget: string
+        required: true
 
       - name: "fields"
         label: "Collection Fields"
         widget: list
-        types:
-          - name: string
-            label: String
-            widget: object
-            fields:
-              - name: name
-                label: Name
-                widget: string
-                required: true
-              - name: default
-                label: Default
-                widget: string
-              - name: required
-                label: Required
-                widget: boolean
-
-          - name: text
-            label: Text
-            widget: object
-            fields:
-              - name: name
-                label: Name
-                widget: string
-                required: true
-              - name: default
-                label: Default
-                widget: string
-              - name: required
-                label: Required
-                widget: boolean
-
-          - name: boolean
-            label: Boolean
-            widget: object
-            fields:
-              - name: name
-                label: Name
-                widget: string
-                required: true
-              - name: default
-                label: Default
-                widget: boolean
-              - name: required
-                label: Required
-                widget: boolean
-
-          - name: 
-
-
-  - name: "events"
-    label: "Events"
-    editor:
-      preview: false
-    folder: "src/events/entries"
-    create: true
-    slug: "{{slug}}"
-    format: json
-    fields:
-      - name: title
-        label: Title
-        widget: string
-
-      - label: Featured
-        name: featured
-        widget: boolean
-        default: false
-
-      - name: description
-        label: Description
-        widget: text
-    
-      - label: Cover Image
-        name: image
-        widget: image
-        required: false
-
-      - name: location
-        label: Location
-        widget: string
-
-      - name: dateTime
-        label: Datetime
-        widget: datetime      
-
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    editor:
-      preview: false # Disables the "eye icon"
-    folder: "src/blog/entries" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    format: "json" # Convert to JSON for better use of the elements
-    fields: # The fields for each document, usually in front matter
-      - label: Title
-        name: title
-        widget: string
-
-      - label: Description
-        name: description
-        widget: text
-
-      - label: Tags
-        name: tags
-        widget: list
-        allow_add: true
-        required: false
-
-      - label: Featured
-        name: featured
-        widget: boolean
-        default: false
-
-      - label: Options
-        name: options
-        widget: object
         collapsed: true
         fields:
+          - name: name
+            label: Name
+            widget: string
+            required: true
+
+          - name: widget
+            label: Type
+            widget: select
+            required: true
+            options: [Boolean, Code, Color, DateTime, File, Hidden, Image, List, Map, Markdown, Number, Object, Relation, Select, String, Text]
+
+          - name: required
+            label: Required
+            widget: boolean
+            required: false
+
+          - name: hint
+            label: Hint
+            widget: markdown
+            required: false
           
-          - label: Publish Date
-            name: date
-            widget: datetime
 
-          - label: Order
-            name: order
-            widget: number
-            value_type: int
-            default: 0
-
-
-      - label: Cover Image
-        name: image
-        widget: image
-        required: false
-
-      - label: Body
-        name: body
-        widget: markdown
+          - name: options
+            label: Options
+            widget: list
+            collapsed: true
+            fields:
+              - name: config
+                label: Config
+                widget: code
+                default_language: "yaml"
+                allow_language_selection: false
+                output_code_only: true
+            
