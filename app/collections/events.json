@@ -1,0 +1,20 @@
+{
+  "name": "Events",
+  "widgets": [
+    {
+      "type": "dateTime",
+      "name": "Date"
+    },
+    {
+      "type": "boolean",
+      "name": "Featured"
+    }
+  ],
+  "fields": [
+    {
+      "type": "dateTime",
+      "name": "Date",
+      "required": true
+    }
+  ]
+}

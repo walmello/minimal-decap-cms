@@ -3,7 +3,10 @@
   "fields": [
     {
       "type": "markdown",
-      "name": "Content"
+      "name": "Content",
+      "hint": "",
+      "options": [],
+      "required": true
     }
   ]
 }
