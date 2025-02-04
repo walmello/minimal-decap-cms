@@ -1,0 +1,9 @@
+{
+  "name": "Blog",
+  "widget": [
+    {
+      "type": "markdown",
+      "name": "Body"
+    }
+  ]
+}
