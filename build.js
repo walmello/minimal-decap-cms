@@ -5,15 +5,10 @@ import config from './decap_config.js';
 const content = yaml.dump(config)
 fs.writeFileSync(`./src/config.yml`,  content)
 
-config.collections.forEach(collection => {
-  const name = collection.name
-  const fields = collection.fields
-  console.log('src/' + name)
-  const json = {
-
-  }
-  //fs.writeFileSync(`./src/${name}.yml`,  content)
-})
+/*
+try {
+  const files = fs.readdirSync('./src/')
+}
 
 
 /*
