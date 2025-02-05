@@ -7,6 +7,25 @@
     site_url: https://minimal-decap-cms.netlify.app/
 
     collections:
+      - name: function
+        label: "Function"
+        editor:
+          preview: false
+        folder: "app/functions"
+        create: true
+        slug: "{{name}}"
+        format: json
+        fields:
+          - name: "name"
+            label: "Name"
+            widget: string
+            required: true
+
+          - name: code
+            label: Code
+            widget: code
+            default_language: "javascript"
+
       - name: "collection"
         label: "Collection"
         editor:
