@@ -1,4 +1,5 @@
 {
   "content": "c﻿onteudo do blog",
-  "title": "Title blog"
+  "title": "Title blog",
+  "featured": true
 }
