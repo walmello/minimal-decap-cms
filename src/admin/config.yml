@@ -2,8 +2,7 @@
       name: git-gateway
       branch: main
 
-    media_folder: "uploads"
-    public_folder: "src/uploads"
+    media_folder: "src/uploads"
     
     site_url: https://minimal-decap-cms.netlify.app/
 

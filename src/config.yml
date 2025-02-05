@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-site_name: https://minimal-decap-cms.netlify.app/
 media_folder: src/uploads
 collections:
   - name: blog

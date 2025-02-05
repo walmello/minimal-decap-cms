@@ -8,7 +8,10 @@ function capitalizeWords(str) {
   return str.split(" ").map(word => capitalize(word)).join(" ");
 }
 
-const collections = fs.readdirSync('./app/collections').map(file => {
+let collections = []
+
+try {
+collections = fs.readdirSync('./app/collections').map(file => {
   const path = './app/collections/' + file
   const content = JSON.parse(fs.readFileSync(path, 'utf-8'), null, 2)
 
@@ -27,8 +30,6 @@ const collections = fs.readdirSync('./app/collections').map(file => {
     required: true
   })
 
-  //console.log(fields)
-
   return {
     name: content.name.toLowerCase(),
     label: capitalizeWords(content.name),
@@ -42,13 +43,14 @@ const collections = fs.readdirSync('./app/collections').map(file => {
     fields: fields
   }
 })
+} catch(e){
+}
 
 export default {
   "backend": {
     "name": "git-gateway",
     "branch": "main"
   },
-  "site_name": "https://minimal-decap-cms.netlify.app/",
   "media_folder": "src/uploads",
   collections
 }
