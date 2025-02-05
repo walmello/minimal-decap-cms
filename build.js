@@ -19,6 +19,15 @@ config.collections.forEach(collection => {
   }
 })
 
+try {
+  const functions = fs.readdirSync('./app/functions')
+  functions.forEach(func => {
+    const name = func.replace('.json', '')
+    const content = JSON.parse(fs.readFileSync(`./app/functions/${func}`, 'utf-8')).code.code
+    fs.writeFileSync(`./netlify/functions/${name}.js`, content)
+  })
+} catch(e){}
+
 /*
 fs.writeFileSync(`./src/config.yml`, JSON.stringify({
   
