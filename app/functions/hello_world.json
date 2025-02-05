@@ -1,0 +1,7 @@
+{
+  "code": {
+    "lang": "javascript",
+    "code": "exports.handler = async (event, context) => {\n  return {\n    statusCode: 200,\n    body: JSON.stringify({ message: \"Hello from Netlify Functions!\" }),\n  };\n};"
+  },
+  "name": "hello_world"
+}
