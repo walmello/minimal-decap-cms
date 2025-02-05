@@ -48,7 +48,7 @@ export default {
     "name": "git-gateway",
     "branch": "main"
   },
+  "site_name": "https://minimal-decap-cms.netlify.app/",
   "media_folder": "src/uploads",
-  "public_folder": "uploads",
   collections
 }
